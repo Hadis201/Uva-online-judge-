@@ -1,0 +1,13 @@
+#include<stdio.h>
+#define pf printf
+#define sf scanf
+int main() {
+    int x;
+    sf("%d",&x);
+    while(x!=0){
+        if(x>=101)pf("f91(%d) = %d\n", x, x-10);
+        else pf("f91(%d) = %d\n",x,91);
+        sf("%d",&x);
+    }
+    return 0;
+}
