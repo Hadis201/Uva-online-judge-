@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+#define sf scanf
+#define pf printf
+void solve(){
+    char name1[100],name2[100], vowel[5] = {'a','e','i','o','u'};
+    int i=0,flag=0, j, k;
+    sf("%s %s", &name1,&name2);
+   /* pf("%c",vowel[4]);*/
+   /* pf("%s %s",name1,name2);*/
+    if(strlen(name1)!=strlen(name2)){
+        pf("No\n");
+        return;
+    }
+    
+    for(i=0; i<strlen(name1);i++){
+        flag=0;
+        for(j=0;j<5;j++){
+            if(name1[i]==vowel[j]){
+                flag=1;
+                break;
+            }
+        }
+        if(flag)continue;
+        
+        if(name1[i]!=name2[i]){
+            printf("No\n");
+           /* pf("Yes");*/
+            return;
+        }
+    }
+    pf("Yes\n");
+    
+    
+}
+int main() {
+    int t;
+    scanf("%d",&t);
+    
+    while(t--)solve();
+    return 0;
+}
