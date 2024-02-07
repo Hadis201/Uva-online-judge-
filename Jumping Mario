@@ -1,0 +1,20 @@
+#include<stdio.h>
+int x=1;
+
+void solve(){
+    int n, dn=0,up=0,i;
+    scanf("%d", &n);int a[n+1];
+    for(i=1;i<=n;i++)scanf("%d",&a[i]);
+    for(i=1;i<n;i++){
+        if(a[i]>a[i+1])dn++;
+        if(a[i]<a[i+1])up++;
+    }
+    printf("Case %d: %d %d\n",x++,up,dn);
+}
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    while(t--)solve();
+    
+}
