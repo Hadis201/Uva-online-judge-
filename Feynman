@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main() {
+    long long int n; 
+    scanf("%lld", &n);
+    while(n!=0){
+        long long int ans = 0;
+        long long int i = 1;
+        for(; i<=n;i++)ans+=i*i;
+        printf("%lld\n", ans);
+        scanf("%lld", &n);
+    }
+    return 0;
+}
